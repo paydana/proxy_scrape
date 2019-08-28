@@ -32,10 +32,9 @@ import requests, re
 from bs4 import BeautifulSoup
 from sys import argv
 import os
+import sys
 
-user_dir = os.environ['HOME']                # Use the HOME envrionment variable
-list_dir = '%s/proxy_list' % user_dir
-proxy_list = '%s/proxy_list/proxy_list.file' % user_dir # set where to save the list
+proxy_list = sys.path[0] + '/proxy_list.file'  # set where to save the list
 
 def get_parsed_page_one():
     """
